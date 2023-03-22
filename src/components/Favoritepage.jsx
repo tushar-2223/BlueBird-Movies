@@ -3,21 +3,19 @@ import Header from './Header';
 import Contextpage from '../Contextpage';
 import Moviecard from './Moviecard';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Navigate } from 'react-router-dom';
 
 function Favoritepage() {
 
-    const { loader, GetFavorite } = useContext(Contextpage);
+    const { loader, GetFavorite ,user} = useContext(Contextpage);
     const [localStorageData, setLocalStorageData] = useState([]);
 
     useEffect(() => {
-
         GetFavorite();
 
         const data = localStorage;
         setLocalStorageData(data);
     }, []);
-
-    // console.log(localStorageData)
 
     return (
         <>
