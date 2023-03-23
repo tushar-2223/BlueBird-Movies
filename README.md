@@ -13,7 +13,7 @@ BlueBird-Movies is a React-based movie website that allows users to search for m
 - Bookmark Movies: users can bookmark their favorite movies for later viewing
 - Google Authentication: users can sign in using their Google account
 
-# Technology i use
+# Technology
 
 BlueBird-Movies is built using the following technologies:
 
