@@ -1,5 +1,5 @@
 # BlueBird-Movies
-React movie website with search functionality, trending and upcoming movies sections, and the ability to add and remove movies to/from your favorites list.
+BlueBird-Movies is a React-based movie website that allows users to search for movies by title, sort them by genre, view trending and upcoming movies, and bookmark their favorite movies. The website is designed to be user-friendly and visually appealing.
 
 [![background](./readme/bg.png)]()
 
