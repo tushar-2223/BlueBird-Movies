@@ -21,6 +21,19 @@ function Moviecard({ movie }) {
         }
     }, [movie.id]);
 
+    const BookmarkMovie = () => {
+        if (!user) {
+            toast.info("To bookmark this movie, please log in.");
+        } else {
+            setIsBookmarked(!isBookmarked)
+            if (isBookmarked) {
+                localStorage.removeItem(movie.id);
+            } else {
+                localStorage.setItem(movie.id, JSON.stringify(movie));
+            }
+        }
+    }
+
     return (
         <motion.div
             initial={{ opacity: 0 }}
@@ -30,14 +43,7 @@ function Moviecard({ movie }) {
             className="card relative w-full md:w-60 h-[410px] md:h-[360px] my-3 mx-4 md:my-5 md:mx-0 cursor-pointer rounded-xl overflow-hidden">
 
             {/* bookmark buttons */}
-            <button className="absolute bg-black text-white p-2 z-20 right-0 m-3 rounded-full text-xl" onClick={() => {
-                user ? setIsBookmarked(!isBookmarked) : toast.info("To bookmark this movie, please log in.");
-                if (isBookmarked) {
-                    localStorage.removeItem(movie.id);
-                } else {
-                    localStorage.setItem(movie.id, JSON.stringify(movie));
-                }
-            }}> {isBookmarked ? <AiFillStar /> : <AiOutlineStar/>}</button>
+            <button className="absolute bg-black text-white p-2 z-20 right-0 m-3 rounded-full text-xl" onClick={BookmarkMovie}> {isBookmarked ? <AiFillStar /> : <AiOutlineStar/>}</button>
 
             
             <div className='absolute bottom-0 w-full flex justify-between items-end p-3 z-20'>
