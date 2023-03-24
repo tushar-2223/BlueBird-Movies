@@ -1,4 +1,4 @@
-import React,{useEffect} from "react";
+import React from "react";
 import Movies from "../components/Movies";
 import Searchbar from "../components/Searchbar";
 

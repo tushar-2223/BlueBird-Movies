@@ -86,7 +86,6 @@ export function MovieProvider({ children }) {
 
   //<========= firebase Google Authentication ========>
   const googleProvider = new GoogleAuthProvider();// =====> google auth provide
-  
   const GoogleLogin = async () => {
     try {
       const result = await signInWithPopup(auth, googleProvider);

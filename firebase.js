@@ -9,7 +9,7 @@ const firebaseConfig = {
     storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
     messagingSenderId:import.meta.env.VITE_FIREBASE_MESAGING_SENDER_ID,
     appId: import.meta.env.APP_ID
-  };
+};
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
