@@ -1,26 +1,27 @@
-# Logs
-logs
-*.log
+# Ignore Node.js related files and folders
+node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-pnpm-debug.log*
-lerna-debug.log*
+*.env
 
-node_modules
-dist
-dist-ssr
-*.local
+# Ignore Firebase cache files
+.firebase/
 
-# Editor directories and files
-.vscode/*
-!.vscode/extensions.json
-.idea
-.DS_Store
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
+# Ignore Vite build artifacts
+/dist/
+/build/
 
-.env
+# Ignore Firebase app configuration files
+firebase.json
+firebase-debug.log
+firebase-debug.log.json
+firebase-debug.log.old.json
+
+# Ignore Firebase service account keys
+*.json
+*.pem
+*.p12
+
+# Ignore Firebase Functions directory (if applicable)
+functions/node_modules/
