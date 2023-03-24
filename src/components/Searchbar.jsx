@@ -1,4 +1,5 @@
 import React, { useContext, useState } from 'react'
+import { Helmet } from 'react-helmet';
 import Contextpage from '../Contextpage';
 
 function Searchbar() {
@@ -23,6 +24,11 @@ function Searchbar() {
   };
 
   return (
+    <>
+    <Helmet>
+        <title>BlueBird Movies</title>
+    </Helmet>
+
     <div className="w-full bg-gradient-to-r from-fuchsia-500 to-cyan-500 h-[10rem] md:h-[12rem]">
       <div className='h-full w-full bg-black/30 flex justify-center items-center'>
         <input
@@ -36,7 +42,8 @@ function Searchbar() {
           onChange={(e) => setValue(e.target.value)}
         />
       </div>
-    </div>
+      </div>
+      </>
   )
 }
 

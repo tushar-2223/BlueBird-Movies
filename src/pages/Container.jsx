@@ -1,6 +1,6 @@
 import React,{useEffect} from "react";
-import Movies from "./Movies";
-import Searchbar from "./Searchbar";
+import Movies from "../components/Movies";
+import Searchbar from "../components/Searchbar";
 
 function Container() {
     return (

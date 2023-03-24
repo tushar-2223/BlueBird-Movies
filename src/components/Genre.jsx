@@ -1,5 +1,6 @@
 import React, { useEffect, useContext } from 'react'
 import Contextpage from '../Contextpage';
+import {Helmet} from "react-helmet";
 
 function Genre() {
     const { fetchGenre, activegenre, setActiveGenre, genres } = useContext(Contextpage);
@@ -20,6 +21,11 @@ function Genre() {
     // }
 
     return (
+        <>
+         <Helmet>
+            <title>BlueBird Movies | Genres</title>
+        </Helmet>
+
         <div className='flex flex-wrap justify-center px-2'>
             {
                 genres.map((genre) => (
@@ -32,7 +38,8 @@ function Genre() {
 
                 ))
             }
-        </div>
+            </div>
+            </>
     )
 }
 

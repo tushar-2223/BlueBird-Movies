@@ -1,12 +1,12 @@
 import React from 'react'
-import { Route, Routes ,Navigate} from 'react-router-dom'
-import Container from './components/Container'
+import { Route, Routes } from 'react-router-dom'
 import { Detail } from './components/Detail';
 import Login from './auth/Login';
 import Navbar from './components/Navbar'
-import Trending from './components/Trending';
-import Upcoming from './components/Upcoming';
-import Favorite from './components/Favoritepage';
+import Container from './pages/Container'
+import Trending from './pages/Trending';
+import Upcoming from './pages/Upcoming';
+import Favorite from './pages/Favoritepage';
 import { MovieProvider } from "./Contextpage";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';

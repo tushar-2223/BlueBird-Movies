@@ -1,9 +1,10 @@
 import React, { useEffect, useContext } from 'react'
 import Contextpage from '../Contextpage';
-import Moviecard from './Moviecard';
+import Moviecard from '../components/Moviecard';
 import { motion, AnimatePresence } from 'framer-motion';
-import Header from './Header';
-import { Pagebtn } from './Pagebtn';
+import Header from '../components/Header';
+import { Pagebtn } from '../components/Pagebtn';
+import { Helmet } from 'react-helmet';
 
 function Trending() {
 
@@ -16,6 +17,10 @@ function Trending() {
 
   return (
       <>
+          <Helmet>
+          <title>BlueBird Movies | Trending</title>
+        </Helmet>
+          
         <div className='w-full bg-[#10141e] md:p-10 mb-20 md:mb-0'>
             <Header />
             <motion.div

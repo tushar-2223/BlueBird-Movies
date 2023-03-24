@@ -1,13 +1,13 @@
 import React, { useEffect, useContext, useState } from 'react'
-import Header from './Header';
+import Header from '../components/Header';
 import Contextpage from '../Contextpage';
-import Moviecard from './Moviecard';
+import Moviecard from '../components/Moviecard';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Navigate } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 
 function Favoritepage() {
 
-    const { loader, GetFavorite ,user} = useContext(Contextpage);
+    const { loader, GetFavorite } = useContext(Contextpage);
     const [localStorageData, setLocalStorageData] = useState([]);
 
     useEffect(() => {
@@ -19,6 +19,10 @@ function Favoritepage() {
 
     return (
         <>
+          <Helmet>
+            <title>BlueBird Movies | Favorite Movies</title>
+          </Helmet>
+            
             <div className='w-full bg-[#10141e] md:p-10 mb-20 md:mb-0'>
                 <Header />
                 <motion.div
