@@ -17,10 +17,10 @@ BlueBird-Movies is a React-based movie website that allows users to search for m
 
 BlueBird-Movies is built using the following technologies:
 
-- ReactJS: a popular JavaScript library for building user interfaces
-- TMDB API: an API that provides movie data
-- Firebase Google Authentication: a service for authenticating users with Google accounts
-- Framer Motion: a React library for creating animations
+- ReactJS
+- TMDB API
+- Firebase Google Authentication
+- Framer Motion
 
 # Demo 
 
