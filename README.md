@@ -22,6 +22,16 @@ BlueBird-Movies is built using the following technologies:
 - Firebase Google Authentication
 - Framer Motion
 
+# How to run website on your system
+
+- step 1 : download whole webiste code on your system and extract zip file.
+
+- step 2 : first start to website you need to get tmdb movies api key and firebase config using following step and add api key and config at .env file
+- step 2 (GET TMDB API KEY ) => Go to https://www.themoviedb.org/ and login after click on user profile pic on nav bar and go to settings in settign go to api and generate api key
+- step 2 (Firebase confige) => in my website web need to use firebase for google authentication first you go to firebase console and build project and
+
+- step 3 : go to code editor (vs code) on your system and open terminal 
+
 # Demo 
 
 - Check out our live demo at https://bluebirdmovies.netlify.app/ 
