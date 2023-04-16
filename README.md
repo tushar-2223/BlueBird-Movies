@@ -3,7 +3,7 @@ BlueBird-Movies is a React-based movie website that allows users to search for m
 
 ![background](https://user-images.githubusercontent.com/87109400/231843668-00e0d9aa-8447-4148-8a3a-0b68135c0795.png)
 
-# Features 
+# 🍿 Features 
 
 - Search movies: users can search for movies by title
 - Genre-wise display: movies can be sorted by genre
@@ -13,7 +13,7 @@ BlueBird-Movies is a React-based movie website that allows users to search for m
 - Bookmark Movies: users can bookmark their favorite movies for later viewing
 - Google Authentication: users can sign in using their Google account
 
-# Technology
+# 🍿 Technology
 
 BlueBird-Movies is built using the following technologies:
 
@@ -22,7 +22,7 @@ BlueBird-Movies is built using the following technologies:
 - Firebase Google Authentication
 - Framer Motion
 
-# How to Run the Website on Your System
+# 🍿 How to Run the Website on Your System
 
 ## Step 1: Download and Extract the Code
 
@@ -69,7 +69,7 @@ This will start the application. Open a web browser and navigate to http://local
 
 Note: Ensure that you have carefully added the TMDB API key and Firebase authentication configuration to your .env file. If the .env file is not working, add all the API keys and configuration manually.
 
-# Demo 
+# 🍿 Demo 
 
 - Check out our live demo at https://bluebirdmovies.netlify.app/ 
  
