@@ -32,13 +32,13 @@ Firstly, download the entire website code and extract the ZIP file to a folder o
 
 Before starting the website, you will need to obtain the TMDB Movies API key and Firebase configuration. Follow these steps to obtain them and add them to your `.env` file.
 
-### Get TMDB API Key
+### Get TMDB API Key ▶️
 
 - Go to https://www.themoviedb.org/ and log in.
 - Click on your user profile picture in the navigation bar, and select "Settings".
 - In the settings, select "API" and generate an API key.
 
-### Firebase Setup
+### Firebase Setup ▶️
 
 Note that Firebase is only required for Google authentication. If you are not using Google authentication in your application, you can skip this step.
 
