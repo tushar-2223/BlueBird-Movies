@@ -134,5 +134,3 @@ export function MovieProvider({ children }) {
   );
 
 }
-
-export default Contextpage;
