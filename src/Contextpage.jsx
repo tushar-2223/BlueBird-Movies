@@ -77,6 +77,8 @@ export function MovieProvider({ children }) {
     setHeader("Upcoming Movies")
   }
 
+
+
   // creat local storage
   const GetFavorite = () => {
     setLoader(false)

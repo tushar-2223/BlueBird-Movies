@@ -34,7 +34,6 @@ function Movies() {
                 </AnimatePresence>
             </motion.div>
             <Pagebtn/>
-            
         </div>
     )
 }

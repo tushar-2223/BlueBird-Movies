@@ -14,6 +14,32 @@ function Navbar() {
     const [activemobile, setActivemobile] = useState(false);
 
     // console.log(user)
+    const Navdata = [
+        {
+            id: 1,
+            headername: "Genres",
+            Name: "Genres",
+            link : "/"
+        },
+        {
+            id: 2,
+            headername: "Trending Movies",
+            Name: "Trending",
+            link:"/trending"
+        },
+        {
+            id: 3,
+            headername: "Upcoming Movies",
+            Name: "Upcoming",
+            link:"/upcoming"
+        },
+        {
+            id: 4,
+            headername: "Favorite Movies",
+            Name: "Favorites",
+            link:"/favorite"
+        }
+    ]
 
     return (
         <>
@@ -36,14 +62,12 @@ function Navbar() {
 
 
                 <ul className="text-white font-semibold text-[16px] text-center px-5">
+                    {Navdata.map((data) => (
+                        <>
+                            <Link to={data.link}><li key={data.id} className={`${header == data.headername ? 'bg-blue-500/20 border-blue-600' : 'bg-gray-500/20 border-black'} p-2 my-2  hover:bg-blue-500/20 rounded-[5px] border-2 hover:border-blue-600`} onClick={() => setActivemobile(!activemobile)}>{data.Name}</li></Link>
+                        </>
+                    ))}
 
-                    <Link to="/"><li className={`${header == "Genres" ? 'bg-blue-500/20 border-blue-600' : 'bg-gray-500/20 border-black'} p-2 my-2  hover:bg-blue-500/20 rounded-[5px] border-2 hover:border-blue-600`} onClick={() => setActivemobile(!activemobile)}>Genres</li></Link>
-
-                    <Link to="/trending"><li className={`${header == "Trending Movies" ? 'bg-blue-500/20 border-blue-600' : 'bg-gray-500/20 border-black'} p-2 my-2  hover:bg-blue-500/20 rounded-[5px] border-2 hover:border-blue-600 `} onClick={() => setActivemobile(!activemobile)}>Trending</li></Link>
-
-                    <Link to="/upcoming"><li className={`${header == "Upcoming Movies" ? 'bg-blue-500/20 border-blue-600' : 'bg-gray-500/20 border-black'} p-2 my-2  hover:bg-blue-500/20 rounded-[5px] border-2 hover:border-blue-600 `} onClick={() => setActivemobile(!activemobile)}>Upcoming</li></Link>
-
-                    <Link to="/favorite"><li className={`${header == "Favorite Movies" ? 'bg-blue-500/20 border-blue-600' : 'bg-gray-500/20 border-black'} p-2 my-2  hover:bg-blue-500/20 rounded-[5px] border-2 hover:border-blue-600 `} onClick={() => setActivemobile(!activemobile)}>Favorites</li></Link>
                 </ul>
 
                 {/* Loginsection */}

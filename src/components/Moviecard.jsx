@@ -1,4 +1,4 @@
-import React, { useState, useEffect ,useContext} from 'react'
+import React, { useState, useEffect ,useContext } from 'react'
 import { Link } from 'react-router-dom'
 import noimage from '../assets/images/no-image.jpg'
 import { motion } from 'framer-motion'
