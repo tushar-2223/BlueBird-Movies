@@ -31,7 +31,7 @@ export function MovieProvider({ children }) {
 
   const filteredGenre = async () => {
     const data = await fetch(
-      `https://api.themoviedb.org/3/discover/movie?with_genres=${activegenre}&api_key=${APIKEY}&page=${page}`
+      `https://api.themoviedb.org/3/discover/movie?with_genres=${activegenre}&api_key=${APIKEY}&with_origin_country=IN&page=${page}`
     );
     const movies = await data.json();
     setMovies(movies.results);
@@ -41,7 +41,7 @@ export function MovieProvider({ children }) {
 
   const fetchSearch = async (query) => {
     const data = await fetch(
-      `https://api.themoviedb.org/3/search/movie?api_key=${APIKEY}&language=en-US&query=${query}&page=1&include_adult=false`
+      `https://api.themoviedb.org/3/search/movie?api_key=${APIKEY}&with_origin_country=IN&language=en-US&query=${query}&page=1&include_adult=false`
     );
     const searchmovies = await data.json();
     setMovies(searchmovies.results);
@@ -51,7 +51,7 @@ export function MovieProvider({ children }) {
 
   const fetchGenre = async () => {
     const data = await fetch(
-      `https://api.themoviedb.org/3/genre/movie/list?api_key=${APIKEY}&language=en-US`
+      `https://api.themoviedb.org/3/genre/movie/list?api_key=${APIKEY}&with_origin_country=IN&language=en-US`
     );
     const gen = await data.json();
     setGenres(gen.genres);
@@ -59,7 +59,7 @@ export function MovieProvider({ children }) {
 
   const fetchTrending = async () => {
     const data = await fetch(
-      `https://api.themoviedb.org/3/trending/all/day?api_key=${APIKEY}&page=${page}`
+      `https://api.themoviedb.org/3/trending/all/week?api_key=${APIKEY}&with_origin_country=IN&page=${page}`
     );
     const trend = await data.json();
     setTrending(trend.results);
@@ -69,7 +69,7 @@ export function MovieProvider({ children }) {
 
   const fetchUpcoming = async () => {
     const data = await fetch(
-      `https://api.themoviedb.org/3/movie/upcoming?api_key=${APIKEY}&language=en-US&page=${page}`
+      `https://api.themoviedb.org/3/movie/upcoming?api_key=${APIKEY}&with_origin_country=IN&language=en-US&page=${page}`
     );
     const upc = await data.json();
     setUpcoming(upc.results)
