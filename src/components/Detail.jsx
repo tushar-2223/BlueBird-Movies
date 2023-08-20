@@ -6,6 +6,7 @@ import noimage from '../assets/images/movies.jpg'
 import { FaPlay } from "react-icons/fa";
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
+import slugify from 'react-slugify';
 
 export const Detail = () => {
   const APIKEY = import.meta.env.VITE_API_KEY;
@@ -54,6 +55,7 @@ export const Detail = () => {
     fetchVideo();
   }, []);
 
+  
   return (
 
     <>
@@ -66,7 +68,7 @@ export const Detail = () => {
             {/* poster */}
             <div className='relative h-auto md:h-[82vh] flex justify-center'>
               <div className='h-full w-full shadowbackdrop absolute'></div>
-              <h1 className='text-white absolute bottom-0 p-10 text-2xl md:text-6xl font-bold text-center'>{moviedet.original_title}</h1>
+              <h1 className='text-white absolute bottom-0 p-10 text-2xl md:text-6xl font-bold text-center'>{moviedet.title}</h1>
               {moviedet.backdrop_path === null ? <img src={noimage} className='h-full w-full' /> : <img src={"https://image.tmdb.org/t/p/original/" + moviedet.backdrop_path} className='h-full w-full' />}
             </div>
 
@@ -108,20 +110,24 @@ export const Detail = () => {
 
             {/* trailer */}
             <div className='flex justify-center items-center mb-10 gap-5 flex-wrap'>
-            {video.map((trail) => (
-              <>
-                {trail.type === "Trailer" ?
-                  <>
-                    <a key={trail.id} href={'https://www.youtube.com/watch?v=' + trail.key} target="_blank" className='flex border-2 border-red-600 bg-red-600/40 p-3 items-center justify-center gap-2 text-xl font-semibold rounded-full text-white'>
-                      <FaPlay />Watch trailer
-                    </a>
-                  </>
-                  : null}
-              </>
-            ))
-            }
-              </div>
+              {Array.from(video).filter(trail => trail.type === "Trailer").map((trail, index) => (
+                <>
+                    <>
+                      <a key={trail.id} href={'https://www.youtube.com/watch?v=' + trail.key} target="_blank" className='flex border-2 border-red-600 bg-red-600/40 p-3 items-center justify-center gap-2 text-xl font-semibold rounded-full text-white'>
+                        <FaPlay />Watch trailer {Array.from(video).filter(trail => trail.type === "Trailer").length>1?index+1:""}
+                      </a>
+                    </>
+                </>
+              ))
+              }
+            </div>
 
+            {/* watch movie */}
+            <div className='flex justify-center items-center mb-10 gap-5 flex-wrap'>
+              <Link  to={`/watchmovie/${id}/${slugify(moviedet.title)}`} className='flex border-2 border-green-600 bg-green-600/40 p-3 items-center justify-center gap-2 text-xl font-semibold rounded-full text-white'>
+                <FaPlay />Watch Movie
+              </Link>
+            </div>
           </>
       }
     </>

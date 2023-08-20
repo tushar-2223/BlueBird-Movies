@@ -35,7 +35,7 @@ function Searchbar() {
           type="search"
           name="searchpanel"
           id="searchpanel"
-          placeholder='Search movie'
+          placeholder='Search Movie'
           className='p-3 w-full mx-10 md:w-[40rem]  rounded-xl outline-none'
           onKeyDown={(e) => onKeyUp(e)}
           value={value}

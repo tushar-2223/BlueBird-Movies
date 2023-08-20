@@ -10,7 +10,7 @@ import Favorite from './pages/Favoritepage';
 import { MovieProvider } from "./Contextpage";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
+import WatchMovie from './components/WatchMovie';
 
 function App() {
 
@@ -38,6 +38,8 @@ function App() {
           <Route path='/upcoming' element={<Upcoming />} />
           <Route path='/moviedetail/:id' element={<Detail />} />
           <Route path="/favorite" element={<Favorite />} />
+          <Route path="/watchmovie/:id/:title" element={<WatchMovie />} /> {/*Route-1 For WatchMovie, Title is just for beauty of url, it is not used anywhere.*/}
+          <Route path="/watchmovie/:id" element={<WatchMovie />} /> {/*Route-2 For WatchMovie. Movie still available even if someone removes Title from end of the url.*/}
         </Routes>
       </div>
     </MovieProvider>
