@@ -22,7 +22,7 @@ function Genre() {
 
     return (
         <>
-         <Helmet>
+        <Helmet>
             <title>BlueBird Movies | Genres</title>
         </Helmet>
 
