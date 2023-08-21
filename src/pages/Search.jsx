@@ -3,7 +3,7 @@ import Contextpage from '../Contextpage';
 import Moviecard from '../components/Moviecard';
 import { motion, AnimatePresence } from 'framer-motion';
 import Header from '../components/Header';
-import { Pagebtn } from '../components/Pagebtn';
+// import { Pagebtn } from '../components/Pagebtn';
 import { Link, useParams } from 'react-router-dom'
 import { HiChevronLeft } from "react-icons/hi";
 
@@ -37,7 +37,7 @@ function Search() {
                         }
                     </AnimatePresence>
                 </motion.div>
-                <Pagebtn />
+                {/* <Pagebtn /> */}
 
             </div>
         </section>
