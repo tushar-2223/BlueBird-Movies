@@ -124,7 +124,7 @@ export const Detail = () => {
 
             {/* watch movie */}
             <div className='flex justify-center items-center mb-10 gap-5 flex-wrap'>
-              <Link  to={`/watchmovie/${id}/${slugify(moviedet.title)}`} className='flex border-2 border-green-600 bg-green-600/40 p-3 items-center justify-center gap-2 text-xl font-semibold rounded-full text-white'>
+              <Link  to={`/player/${id}/${slugify(moviedet.title)}`} className='flex border-2 border-green-600 bg-green-600/40 p-3 items-center justify-center gap-2 text-xl font-semibold rounded-full text-white'>
                 <FaPlay />Watch Movie
               </Link>
             </div>
