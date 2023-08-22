@@ -1,6 +1,6 @@
 import React, { useEffect, useContext } from 'react'
 import { Link, useParams } from 'react-router-dom'
-import { getSmashystreamUrl, getStreamembedUrl, get2embedUrl } from '../movies'
+import { getSmashystreamUrl, getSuperembedUrl, get2embedUrl } from '../movies'
 import { useState } from 'react'
 import Contextpage from '../Contextpage'
 import { HiChevronLeft } from "react-icons/hi";
@@ -32,7 +32,7 @@ const Player = () => {
     return (
       <>
         <button onClick={()=>history.back()} className='fixed z-10 text-4xl text-black bg-white m-3 md:m-5 rounded-full'><HiChevronLeft /></button>
-        <iframe sandbox = "allow-forms allow-pointer-lock allow-same-origin allow-scripts allow-top-navigation" allowFullScreen="true" style={{ display: 'flex', alignItems:"center", justifyContent:"center", width:"100%", height:"100vh"}} src={getSmashystreamUrl(id)}></iframe>
+        <iframe allowFullScreen style={{ display: 'flex', alignItems:"center", justifyContent:"center", width:"100%", height:"100vh"}} src={getSmashystreamUrl(id)}></iframe>
       </>
     )
 }
