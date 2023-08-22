@@ -10,7 +10,8 @@ import Favorite from './pages/Favoritepage';
 import { MovieProvider } from "./Contextpage";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import WatchMovie from './components/WatchMovie';
+import Player from './pages/Player';
+import Search from './pages/Search';
 import { Helmet } from "react-helmet";
 import logo from "./assets/images/logo.png"
 
@@ -43,8 +44,10 @@ function App() {
           <Route path='/upcoming' element={<Upcoming />} />
           <Route path='/moviedetail/:id' element={<Detail />} />
           <Route path="/favorite" element={<Favorite />} />
-          <Route path="/watchmovie/:id/:title" element={<WatchMovie />} /> {/*Route-1 For WatchMovie, Title is just for beauty of url, it is not used anywhere.*/}
-          <Route path="/watchmovie/:id" element={<WatchMovie />} /> {/*Route-2 For WatchMovie. Movie still available even if someone removes Title from end of the url.*/}
+          <Route path="/player/:id/:title" element={<Player />} /> {/*Route-1 For Player, Title is just for beauty of url, it is not used anywhere.*/}
+          <Route path="/player/:id" element={<Player />} /> {/*Route-2 For Player. Movie still available even if someone removes Title from end of the url.*/}
+          <Route path="/search/:query" element={<Container/>}/>
+          <Route path="/search/" element={<Container/>}/>
         </Routes>
       </div>
     </MovieProvider>
