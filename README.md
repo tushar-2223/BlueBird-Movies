@@ -84,5 +84,10 @@ Note: Ensure that you have carefully added the TMDB API key and Firebase authent
  
 - Youtube video : https://www.youtube.com/watch?v=mGqOOtEGmJc.
 
+https://github.com/tushar-2223/BlueBird-Movies/assets/87109400/2c13988f-d058-456b-a2e3-f3b716646fe6
+
+
+  
+
 # 😍 Contribution
 Contributions are always welcome, open a **Pull Request** and help us improve our project.
