@@ -74,6 +74,3 @@ function Movies() {
 }
 
 export default Movies
-
-
-//   `https://api.themoviedb.org/3/trending/all/day?api_key=b454aa11fb4b5fc5b515d2e80a898a1c&page=${page}`
