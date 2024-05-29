@@ -14,6 +14,7 @@ import Player from './pages/Player';
 import Search from './pages/Search';
 import { Helmet } from "react-helmet";
 import logo from "./assets/images/logo.png"
+import Anime from './components/Anime';
 
 function App() {
 
@@ -46,7 +47,9 @@ function App() {
           <Route path="/favorite" element={<Favorite />} />
           <Route path="/player/:id/:title" element={<Player />} /> {/*Route-1 For Player, Title is just for beauty of url, it is not used anywhere.*/}
           <Route path="/player/:id" element={<Player />} /> {/*Route-2 For Player. Movie still available even if someone removes Title from end of the url.*/}
+          <Route path="/anime" element={<Anime />} /> {/**/}
           <Route path="/search/:query" element={<Container/>}/>
+          <Route path="/search/anime/:query" element={<Container/>}/>
           <Route path="/search/" element={<Container/>}/>
         </Routes>
       </div>

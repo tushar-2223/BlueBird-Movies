@@ -63,7 +63,8 @@ export const Detail = () => {
         loader ? <div className='h-screen w-full flex justify-center items-center'><span className="loader m-10"></span></div> :
           <>
 
-            <Link to="/" className='fixed z-10 text-4xl text-black bg-white m-3 md:m-5 rounded-full'><HiChevronLeft /></Link>
+            <button onClick={()=>history.back()} className='fixed z-10 text-4xl text-black bg-white m-3 md:m-5 rounded-full'><HiChevronLeft /></button>
+
 
             {/* poster */}
             <div className='relative h-auto md:h-[82vh] flex justify-center'>

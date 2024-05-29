@@ -48,12 +48,23 @@ export function MovieProvider({ children }) {
 
   const fetchSearch = async (query) => {
     const data = await fetch(
-      `https://api.themoviedb.org/3/search/movie?api_key=${APIKEY}&with_origin_country=IN&language=en-US&query=${query}&page=1&include_adult=false`
+      `https://api.themoviedb.org/3/search/movie?api_key=${APIKEY}&with_origin_country=IN&language=en-US&query=${query}&page=1&include_adult=true`
     );
     const searchmovies = await data.json();
     setSearchedMovies(searchmovies.results); 
     setLoader(false);
     setHeader(`Results for "${query}"`);
+  }
+
+  const fetchAnime = async (query) => {
+    const data = await fetch(
+      `https://api.themoviedb.org/3/discover/movie?with_genres=${activegenre}&api_key=${APIKEY}&with_keywords=210024|287501&page=${page}`
+    );
+    const filteredGenre = await data.json();
+    setMovies(movies.concat(filteredGenre.results)); // Concat new movies with previous movies, on genre change movies are reset to [] so that only movies of new genre will appear, check out useEffect on top for more information.
+    setTotalPage(filteredGenre.total_pages);
+    setLoader(false);
+    setHeader("Anime");
   }
 
   const fetchGenre = async () => {
@@ -124,6 +135,7 @@ export function MovieProvider({ children }) {
         activegenre,
         setActiveGenre,
         fetchSearch,
+        fetchAnime,
         loader,
         setBackGenre,
         backgenre,
