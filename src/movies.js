@@ -1,3 +1,6 @@
+export const embed4u = (tmdbID) =>{
+    return `https://embed.kimostream.eu.org/?id=${tmdbID}`
+}
 export const getSmashystreamUrl = (tmdbID) =>{
     return `https://embed.smashystream.com/playere.php?tmdb=${tmdbID}`
 }
