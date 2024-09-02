@@ -55,7 +55,7 @@ export const Detail = () => {
     fetchVideo();
   }, []);
 
-  
+
   return (
 
     <>
@@ -63,7 +63,7 @@ export const Detail = () => {
         loader ? <div className='h-screen w-full flex justify-center items-center'><span className="loader m-10"></span></div> :
           <>
 
-            <button onClick={()=>history.back()} className='fixed z-10 text-4xl text-black bg-white m-3 md:m-5 rounded-full'><HiChevronLeft /></button>
+            <button onClick={() => history.back()} className='fixed z-10 text-4xl text-black bg-white m-3 md:m-5 rounded-full'><HiChevronLeft /></button>
 
 
             {/* poster */}
@@ -113,22 +113,23 @@ export const Detail = () => {
             <div className='flex justify-center items-center mb-10 gap-5 flex-wrap'>
               {Array.from(video).filter(trail => trail.type === "Trailer").map((trail, index) => (
                 <>
-                    <>
-                      <a key={trail.id} href={'https://www.youtube.com/watch?v=' + trail.key} target="_blank" className='flex border-2 border-red-600 bg-red-600/40 p-3 items-center justify-center gap-2 text-xl font-semibold rounded-full text-white'>
-                        <FaPlay />Watch trailer {Array.from(video).filter(trail => trail.type === "Trailer").length>1?index+1:""}
-                      </a>
-                    </>
+                  <>
+                    <a key={trail.id} href={'https://www.youtube.com/watch?v=' + trail.key} target="_blank" className='flex border-2 border-red-600 bg-red-600/40 p-3 items-center justify-center gap-2 text-xl font-semibold rounded-full text-white'>
+                      <FaPlay />Watch trailer {Array.from(video).filter(trail => trail.type === "Trailer").length > 1 ? index + 1 : ""}
+                    </a>
+                  </>
                 </>
               ))
               }
             </div>
 
-            {/* watch movie */}
-            <div className='flex justify-center items-center mb-10 gap-5 flex-wrap'>
+            {/* watch movie */} {/*I have disabled it for now*/}
+            {/* <div className='flex justify-center items-center mb-10 gap-5 flex-wrap'>
               <Link  to={`/player/${id}/${slugify(moviedet.title)}`} className='flex border-2 border-green-600 bg-green-600/40 p-3 items-center justify-center gap-2 text-xl font-semibold rounded-full text-white'>
                 <FaPlay />Watch Movie
               </Link>
             </div>
+             */}
           </>
       }
     </>
