@@ -21,7 +21,7 @@ export function MovieProvider({ children }) {
   const [loader, setLoader] = useState(true);
   const [backgenre, setBackGenre] = useState(false);
   const [user, setUser] = useAuthState(auth)//=======> firebase custom hooks state
-  const navigate = useNavigate();// =====> navigate page
+  const navigate = useNavigate();
 
   const APIKEY = import.meta.env.VITE_API_KEY;
 
@@ -77,15 +77,12 @@ export function MovieProvider({ children }) {
     setHeader("Upcoming Movies")
   }
 
-
-
   // creat local storage
   const GetFavorite = () => {
     setLoader(false)
     setHeader("Favorite Movies")
   }
       
-
   //<========= firebase Google Authentication ========>
   const googleProvider = new GoogleAuthProvider();// =====> google auth provide
   const GoogleLogin = async () => {
@@ -136,4 +133,4 @@ export function MovieProvider({ children }) {
 
 }
 
-export default Contextpage;
+export default Contextpage
