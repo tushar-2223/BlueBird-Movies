@@ -102,17 +102,11 @@ export function MovieProvider({ children }) {
     setLoader(false);
     setHeader("Favorite Movies");
   }
-<<<<<<< HEAD
-      
-  //<========= firebase Google Authentication ========>
-  const googleProvider = new GoogleAuthProvider();// =====> google auth provide
-=======
 
 
   //<========= firebase Google Authentication ========>
   const googleProvider = new GoogleAuthProvider();// =====> google auth provide
 
->>>>>>> 591923c1ba61242c492c6786b8fa32de748e022d
   const GoogleLogin = async () => {
     try {
       const result = await signInWithPopup(auth, googleProvider);

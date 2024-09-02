@@ -10,14 +10,11 @@ import Favorite from './pages/Favoritepage';
 import { MovieProvider } from "./Contextpage";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-<<<<<<< HEAD
-=======
 import Player from './pages/Player';
 import Search from './pages/Search';
 import { Helmet } from "react-helmet";
 import logo from "./assets/images/logo.png"
 import Anime from './components/Anime';
->>>>>>> 591923c1ba61242c492c6786b8fa32de748e022d
 
 function App() {
 
