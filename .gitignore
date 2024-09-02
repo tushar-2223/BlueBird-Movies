@@ -8,25 +8,6 @@ yarn-error.log*
 # Ignore Firebase cache files
 .firebase/
 
-<<<<<<< HEAD
-# Ignore Vite build artifacts
-/dist/
-/build/
-
-# Ignore Firebase app configuration files
-firebase.json
-firebase-debug.log
-firebase-debug.log.json
-firebase-debug.log.old.json
-
-# Ignore Firebase service account keys
-*.json
-*.pem
-*.p12
-
-# Ignore Firebase Functions directory (if applicable)
-functions/node_modules/
-=======
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
@@ -38,4 +19,3 @@ functions/node_modules/
 *.sln
 *.sw?
 development.env
->>>>>>> 591923c1ba61242c492c6786b8fa32de748e022d

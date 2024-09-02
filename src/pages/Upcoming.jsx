@@ -9,13 +9,6 @@ import InfiniteScroll from 'react-infinite-scroll-component';
 
 function Upcoming() {
 
-<<<<<<< HEAD
-  const { loader,setPage, page, fetchUpcoming, upcoming } = useContext(Contextpage);
-    
-    useEffect(() => {
-      fetchUpcoming();
-    }, [page])
-=======
   const { loader, setPage, page, fetchUpcoming, upcoming, totalPage } = useContext(Contextpage);
 
   useEffect(() => {
@@ -27,7 +20,6 @@ function Upcoming() {
       fetchUpcoming();
     }
   }, [page])
->>>>>>> 591923c1ba61242c492c6786b8fa32de748e022d
 
 
   return (
