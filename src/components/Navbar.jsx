@@ -38,6 +38,15 @@ function Navbar() {
             headername: "Favorite Movies",
             Name: "Favorites",
             link:"/favorite"
+<<<<<<< HEAD
+=======
+        },
+        {
+            id: 5,
+            headername: "Anime",
+            Name: "Anime",
+            link:"/anime"
+>>>>>>> 591923c1ba61242c492c6786b8fa32de748e022d
         }
     ]
 
@@ -63,9 +72,13 @@ function Navbar() {
 
                 <ul className="text-white font-semibold text-[16px] text-center px-5">
                     {Navdata.map((data) => (
+<<<<<<< HEAD
                         <>
                             <Link to={data.link}><li key={data.id} className={`${header == data.headername ? 'bg-blue-500/20 border-blue-600' : 'bg-gray-500/20 border-black'} p-2 my-2  hover:bg-blue-500/20 rounded-[5px] border-2 hover:border-blue-600`} onClick={() => setActivemobile(!activemobile)}>{data.Name}</li></Link>
                         </>
+=======
+                            <Link key={data.id} to={data.link}><li className={`${header == data.headername ? 'bg-blue-500/20 border-blue-600 text-white' : 'bg-gray-500/20 border-black'} p-2 my-2  hover:bg-blue-500/20 rounded-[5px] border-2 hover:border-blue-600`} onClick={() => setActivemobile(!activemobile)}>{data.Name}</li></Link>
+>>>>>>> 591923c1ba61242c492c6786b8fa32de748e022d
                     ))}
 
                 </ul>

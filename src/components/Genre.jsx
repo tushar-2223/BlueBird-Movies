@@ -3,11 +3,13 @@ import Contextpage from '../Contextpage';
 import {Helmet} from "react-helmet";
 
 function Genre() {
-    const { fetchGenre, activegenre, setActiveGenre, genres } = useContext(Contextpage);
+    const { fetchGenre, activegenre, setActiveGenre, genres, setMovies, page, setPage, filteredGenre } = useContext(Contextpage);    
+
 
     useEffect(() => {
-        fetchGenre();
+        fetchGenre();  // Fetching Genres on Initial Render.
     }, [])
+
 
     // const filterFunc = () => {
     //     if (activegenre === 0) {
@@ -22,7 +24,7 @@ function Genre() {
 
     return (
         <>
-         <Helmet>
+        <Helmet>
             <title>BlueBird Movies | Genres</title>
         </Helmet>
 

@@ -8,9 +8,9 @@ import Header from './Header';
 import InfiniteScroll from 'react-infinite-scroll-component';
 
 
-function Movies() {
+function Anime() {
 
-    const { movies, loader, page, setPage, totalPage, setMovies, activegenre, filteredGenre } = useContext(Contextpage);
+    const { movies, loader, page, setPage, totalPage, setMovies, activegenre, fetchAnime } = useContext(Contextpage);
 
     useEffect(() => {
         setPage(1) // Reset Page to 1 on initial render.
@@ -26,7 +26,7 @@ function Movies() {
 
     useEffect(() => {
         if (page > 0) {
-            filteredGenre(); // Fetch filtered genre when page changes and only if page is greater than 0.
+            fetchAnime(); // Fetch filtered genre when page changes and only if page is greater than 0.
         }
     }, [page])
     /* Page is dependency here, the funtion will only run if new page value is different from previous. 
@@ -73,5 +73,4 @@ function Movies() {
     )
 }
 
-
-export default Movies
+export default Anime
