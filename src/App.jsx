@@ -15,11 +15,13 @@ import Search from './pages/Search';
 import { Helmet } from "react-helmet";
 import logo from "./assets/images/logo.png"
 import Anime from './components/Anime';
+import AdComponent from './components/AdsenseComponent';
 
 function App() {
 
   return (
     <MovieProvider>
+      <AdComponent/>
       <Helmet>
        <meta property="og:image" content={logo}/>
       </Helmet>

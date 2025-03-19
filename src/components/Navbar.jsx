@@ -72,10 +72,6 @@ function Navbar() {
                     {Navdata.map((data) => (
                             <Link key={data.id} to={data.link}><li className={`${header == data.headername ? 'bg-blue-500/20 border-blue-600 text-white' : 'bg-gray-500/20 border-black'} p-2 my-2  hover:bg-blue-500/20 rounded-[5px] border-2 hover:border-blue-600`} onClick={() => setActivemobile(!activemobile)}>{data.Name}</li></Link>
                     ))}
-
-                    
-                
-                    <AdsenseComponent/>
                 </ul>
 
                 {/* Loginsection */}
