@@ -14,14 +14,10 @@ import Player from './pages/Player';
 import { Helmet } from "react-helmet";
 import logo from "./assets/images/logo.png"
 import Anime from './components/Anime';
-import AdComponent from './components/AdsenseComponent';
 
 function App() {
   return (
     <MovieProvider>
-      <AdComponent
-        adSlot={1332105418}
-      />
       <Helmet>
        <meta property="og:image" content={logo}/>
       </Helmet>
