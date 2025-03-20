@@ -1,3 +1,4 @@
+import 'react-toastify/dist/ReactToastify.css';
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
 import { Detail } from './components/Detail';
@@ -9,19 +10,18 @@ import Upcoming from './pages/Upcoming';
 import Favorite from './pages/Favoritepage';
 import { MovieProvider } from "./Contextpage";
 import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 import Player from './pages/Player';
-import Search from './pages/Search';
 import { Helmet } from "react-helmet";
 import logo from "./assets/images/logo.png"
 import Anime from './components/Anime';
 import AdComponent from './components/AdsenseComponent';
 
 function App() {
-
   return (
     <MovieProvider>
-      <AdComponent/>
+      <AdComponent
+        adSlot={1332105418}
+      />
       <Helmet>
        <meta property="og:image" content={logo}/>
       </Helmet>
